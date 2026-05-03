@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Avinash Kumar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0a0f0d;
+color:#fff;
+}
+
+/* NAVBAR */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#00ffae;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#fff;
+font-size:15px;
+padding:6px 12px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00ffae;
+background:rgba(0,255,174,0.15);
+box-shadow:0 0 10px #00ffae;
+}
+
+
+/* EDUCATION */
+.education-section{
+padding:80px 8%;
+}
+
+.education-section h2{
+text-align:center;
+margin-bottom:40px;
+color:#00ffae;
+}
+
+.education-container{
+display:flex;
+flex-direction:column;
+gap:20px;
+max-width:700px;
+margin:0 auto;
+}
+
+.edu-card{
+background:#111;
+padding:20px;
+border-radius:12px;
+transition:0.3s;
+cursor:pointer;
+box-shadow:0 0 10px rgba(0,255,174,0.1);
+}
+
+.edu-card h3{
+margin-bottom:8px;
+}
+
+.edu-card p{
+color:#cbd5e1;
+font-size:14px;
+margin:3px 0;
+}
+
+.edu-card span{
+font-size:13px;
+color:#00ffae;
+}
+
+.edu-card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #00ffae;
+background:rgba(0,255,174,0.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+text-align:center;
+margin-top:80px;
+}
+.hero-img{
+margin-top:30px;
+}
+.project-card{
+width:100%;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Avinash Kumar</div>
+<nav>
+<a href="index.html" target="_blank">Home</a>
+<a href="education.html" target="_blank">education</a>
+<a href="skills.html" target="_blank">Skills</a>
+<a href="projects.html" target="_blank">Projects</a>
+<a href="contact.html" target="_blank">Contact</a>
+</nav>
+</header>
+
+
+<!-- EDUCATION -->
+<section class="education-section" id="education">
+
+<h2>My Education</h2>
+
+<div class="education-container">
+
+<div class="edu-card">
+<h3>JIS College of Engineering</h3>
+<p>B.Tech - Computer Science Engineering</p>
+<span>2025 - Present</span>
+</div>
+
+<div class="edu-card">
+<h3>Government Polytechnic Khutri</h3>
+<p>Diploma (Web & Multimedia)</p>
+<p>Percentage: 71.5%</p>
+<span>Completed</span>
+</div>
+
+<div class="edu-card">
+<h3>Katras College, Dhanbad</h3>
+<p>12th Commerce</p>
+<p>Percentage: 78.2%</p>
+<span>Completed</span>
+</div>
+
+<div class="edu-card">
+<h3>Buds Garden School</h3>
+<p>10th Board</p>
+<p>Percentage: 69%</p>
+<span>Completed</span>
+</div>
+
+</div>
+
+</section>
+
+<!-- JS -->
+<script>
+const items = document.querySelectorAll(".accordion .item");
+items.forEach(item=>{
+const btn = item.querySelector("button");
+btn.addEventListener("click", ()=>{
+item.classList.toggle("active");
+});
+});
+</script>
+
+</body>
+</html>

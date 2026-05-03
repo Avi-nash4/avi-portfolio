@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Avinash Kumar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0a0f0d;
+color:#fff;
+}
+
+/* NAVBAR */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+position:fixed;
+width:100%;
+z-index:1000;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#00ffae;
+}
+
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#fff;
+font-size:15px;
+padding:6px 12px;
+border-radius:6px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00ffae;
+background:rgba(0,255,174,0.15);
+box-shadow:0 0 10px #00ffae;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 8%;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:550px;
+}
+
+.hero-text h1{
+font-size:45px;
+line-height:1.3;
+}
+
+.hero-text span{
+color:#00ffae;
+}
+
+.hero-text p{
+margin:20px 0;
+color:#cbd5e1;
+line-height:1.6;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:#00ffae;
+color:#000;
+border-radius:6px;
+text-decoration:none;
+font-weight:500;
+}
+
+.btn:hover{
+box-shadow:0 0 15px #00ffae;
+}
+
+/* IMAGE */
+.hero-img{
+position:relative;
+}
+
+.hero-img img{
+width:280px;
+border-radius:50%;
+position:relative;
+z-index:2;
+}
+
+.hero-img::before{
+content:"";
+position:absolute;
+top:-15px;
+left:-15px;
+width:310px;
+height:310px;
+background:radial-gradient(circle,#00ffae,transparent);
+filter:blur(30px);
+border-radius:50%;
+z-index:1;
+}
+
+/* SKILLS */
+.skills-section{
+padding:80px 8%;
+}
+
+.skills-section h2{
+text-align:center;
+margin-bottom:30px;
+color:#00ffae;
+}
+
+/* MAIN BOX */
+.skills-box{
+max-width:700px;
+margin:0 auto;
+background:#111;
+border-radius:12px;
+padding:20px;
+box-shadow:0 0 10px rgba(0,255,174,0.2);
+transition:0.3s;
+}
+
+.skills-box:hover{
+box-shadow:0 0 20px #00ffae;
+transform:translateY(-5px);
+}
+
+/* ACCORDION */
+.accordion .item{
+margin-bottom:10px;
+border-radius:8px;
+overflow:hidden;
+background:#0f172a;
+transition:0.3s;
+}
+
+.accordion .item:hover{
+box-shadow:0 0 10px #00ffae;
+}
+
+.accordion button{
+width:100%;
+padding:15px;
+text-align:left;
+background:transparent;
+color:#fff;
+border:none;
+cursor:pointer;
+font-size:16px;
+transition:0.3s;
+}
+
+.accordion button:hover{
+color:#00ffae;
+}
+
+.accordion .content{
+max-height:0;
+overflow:hidden;
+background:#0a0f0d;
+padding:0 15px;
+transition:0.3s;
+color:#cbd5e1;
+}
+
+.accordion .item.active .content{
+max-height:120px;
+padding:15px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+text-align:center;
+margin-top:80px;
+}
+.hero-img{
+margin-top:30px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Avinash Kumar</div>
+<nav>
+<a href="index.html" target="_blank">Home</a>
+<a href="education.html" target="_blank">education</a>
+<a href="skills.html" target="_blank">Skills</a>
+<a href="projects.html" target="_blank">Projects</a>
+<a href="contact.html" target="_blank">Contact</a>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-text">
+<h1>Hi, I'm <span>Avinash Kumar</span><br>B.Tech Student & Future Engineer</h1>
+
+<p>
+I am a motivated and passionate B.Tech student at JIS College of Engineering (JISCE) with a strong interest in technology and innovation.
+</p>
+
+<p>
+I enjoy learning new concepts and applying them through practical projects.
+</p>
+
+<a href="#skills" class="btn">View Skills</a>
+</div>
+
+<div class="hero-img">
+<img src="IMG_20250612_130230_470.webp" alt="profile">
+</div>
+
+</section>
+
+<!-- SKILLS -->
+<section class="skills-section" id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skills-box">
+<div class="accordion">
+
+<div class="item">
+<button>Data Analysis</button>
+<div class="content">Excel, Visualization, Basic Analytics</div>
+</div>
+
+<div class="item">
+<button>JavaScript</button>
+<div class="content">DOM, Events, Projects</div>
+</div>
+
+<div class="item">
+<button>HTML</button>
+<div class="content">Structure, Forms, Semantic</div>
+</div>
+
+<div class="item">
+<button>Tally ERP</button>
+<div class="content">Accounting, GST Basics</div>
+</div>
+
+<div class="item">
+<button>Python</button>
+<div class="content">Basics, Logic Building</div>
+</div>
+
+<div class="item">
+<button>CSS</button>
+<div class="content">Flexbox, Grid, Responsive</div>
+</div>
+
+<div class="item">
+<button>Java</button>
+<div class="content">OOP Concepts</div>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<!-- JS -->
+<script>
+
+const items = document.querySelectorAll(".accordion .item");
+
+items.forEach(item=>{
+const btn = item.querySelector("button");
+
+btn.addEventListener("click", ()=>{
+item.classList.toggle("active");
+});
+});
+
+</script>
+
+</body>
+</html>
